@@ -8,33 +8,58 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body class="container-fluid d-flex flex-column justify-content-center align-items-center">
+<body class="container-fluid d-flex flex-column justify-content-around">
+    <div class="fixed-top">
     <header>
         <h1 class="text-center">Generador de series dodecafónicas</h1>
     </header>
-    <main class="text-center">
-        <div>
-            <h3>SERIE:</h3>
-            <p id="serieResultadoJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
+        <nav class="d-flex justify-content-center">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                <a class="nav-link active" id="pills-generador-tab" data-toggle="pill" href="#pills-generador" role="tab" aria-controls="pills-generador" aria-selected="true">Generador</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="pills-dodecafonismo-tab" data-toggle="pill" href="#pills-dodecafonismo" role="tab" aria-controls="pills-dodecafonismo" aria-selected="false">¿Qué es la música dodecafónica?</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-generador" role="tabpanel" aria-labelledby="pills-generador-tab">
+            <main class="text-center">
+                <div>
+                    <h3>SERIE:</h3>
+                    <p id="serieResultadoJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
+                </div>
+                <div>
+                    <h3>RETROGRADADA:</h3>
+                    <p id="serieRetrogradadaJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
+                </div>
+                <div>
+                    <h3>INVERTIDA:</h3>
+                    <p id="serieInvertidaJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
+                </div>
+                <div>
+                    <h3>RETROGRADADA INVERTIDA:</h3>
+                    <p id="serieInvertidaRetrogradadaJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
+                </div>
+                <div id="boton" class="d-flex justify-content-center">
+                    <button onclick="generarSeries()" class="btn btn-outline-primary">GENERAR</button>
+                </div>
+            </main>
         </div>
-        <div>
-            <h3>RETROGRADADA:</h3>
-            <p id="serieRetrogradadaJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
+        <div class="tab-pane fade" id="pills-dodecafonismo" role="tabpanel" aria-labelledby="pills-dodecafonismo-tab">
+            <div class="text-center">
+                <p>
+                    El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                </p>
+            </div>
         </div>
-        <div>
-            <h3>INVERTIDA:</h3>
-            <p id="serieInvertidaJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
-        </div>
-        <div>
-            <h3>RETROGRADADA INVERTIDA:</h3>
-            <p id="serieInvertidaRetrogradadaJS" class="invisible">DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI</p>
-        </div>
-        <div id="boton" class="d-flex justify-content-center">
-            <button onclick="generarSeries()" class="btn btn-outline-primary">GENERAR</button>
-        </div>
-    </main>
-    <footer>
-    <p class="mt-3">0.1 // 08.08.2020</p>
+    </div>
+    <footer class="fixed-bottom text-center">
+        <p>
+            0.2 // 02.11.2020
+        </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
