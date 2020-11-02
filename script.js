@@ -133,9 +133,13 @@ function generarSeries() {
 
     // Impresión de resultados.
 
+    document.getElementById("serieResultadoJS").className = "visible";
     document.getElementById("serieResultadoJS").innerHTML = mostrarResultado;
+    document.getElementById("serieRetrogradadaJS").className = "visible";
     document.getElementById("serieRetrogradadaJS").innerHTML = mostrarRetrogradada;
+    document.getElementById("serieInvertidaJS").className = "visible";
     document.getElementById("serieInvertidaJS").innerHTML = mostrarInvertida;
+    document.getElementById("serieInvertidaRetrogradadaJS").className = "visible";
     document.getElementById("serieInvertidaRetrogradadaJS").innerHTML = mostrarInvertidaRetrogradada;
     // document.getElementById("boton").innerHTML = "¡Actualizá la página para empezar de nuevo!";
 }
