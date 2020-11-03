@@ -16,12 +16,12 @@
         <nav class="d-flex justify-content-center my-4">
             <ul class="nav nav-pills flex-column flex-md-row text-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-generador-tab" data-toggle="pill" href="#pills-generador" role="tab" aria-controls="pills-generador" aria-selected="true">
+                    <a class="nav-link active m-2" id="pills-generador-tab" data-toggle="pill" href="#pills-generador" role="tab" aria-controls="pills-generador" aria-selected="true">
                         Generador
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-dodecafonismo-tab" data-toggle="pill" href="#pills-dodecafonismo" role="tab" aria-controls="pills-dodecafonismo" aria-selected="false">
+                    <a class="nav-link m-2" id="pills-dodecafonismo-tab" data-toggle="pill" href="#pills-dodecafonismo" role="tab" aria-controls="pills-dodecafonismo" aria-selected="false">
                         ¿Qué es la música dodecafónica?
                     </a>
                 </li>
@@ -29,7 +29,7 @@
         </nav>
     </div>
     <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-generador" role="tabpanel" aria-labelledby="pills-generador-tab">
+        <div class="tab-pane fade show active background-white" id="pills-generador" role="tabpanel" aria-labelledby="pills-generador-tab">
             <main class="d-flex flex-column align-items-center text-center mx-3">
                 <h3>
                     SERIE:
@@ -56,29 +56,76 @@
                     DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI
                 </p>
                 <div id="boton" class="my-3">
-                    <button onclick="generarSeries()" class="btn btn-outline-primary">GENERAR</button>
+                    <button onclick="generarSeries()" class="btn btn-outline-secondary">GENERAR</button>
                 </div>
             </main>
         </div>
         <div class="tab-pane fade" id="pills-dodecafonismo" role="tabpanel" aria-labelledby="pills-dodecafonismo-tab">
-            <div class="row d-flex justify-content-center mx-3">
-                <div class="col-md-4 mb-3">
-                    <p class="text-justify">
-                        El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
-                    </p>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row d-flex justify-content-center mx-3">
+                        <div class="col-lg-4 mb-3">
+                            <h3 class="text-center text-lg-left">El dodecafonismo</h3>
+                            <p class="text-justify">
+                                El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <figure class="figure text-center">
+                                <img src="assets/arnold-schoenberg.jpg" class="figure-img img-fluid rounded" alt="Foto de Arnold Schönberg">
+                                <figcaption class="figure-caption">Arnold Schönberg, creador de la técnica dodecafónica. (Foto: Florence Homolka)</figcaption>
+                              </figure>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row d-flex justify-content-center mx-3">
+                        <div class="col-lg-4 mb-3">
+                            <h3 class="text-center text-lg-left">Segunda Escuela de Viena</h3>
+                            <p class="text-justify">
+                                Slide 2. El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <figure class="figure">
+                                <img src="assets/berg-webern.jpg" class="figure-img img-fluid rounded" alt="Foto de Alban Berg y Anton Webern">
+                                <figcaption class="figure-caption">Alban Berg y Anton Webern, discípulos de Schönberg (Foto: Alban Berg Stiftung)</figcaption>
+                              </figure>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row d-flex justify-content-center mx-3">
+                        <div class="col-lg-4 mb-3">
+                            <h3 class="text-center text-lg-left">Dodecafonismo latinoamericano</h3>
+                            <p class="text-justify">
+                                Slide 3. El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <figure class="figure">
+                                <img src="assets/juan-carlos-paz.jpg" class="figure-img img-fluid rounded" alt="Foto de Juan Carlos Paz">
+                                <figcaption class="figure-caption">Juan Carlos Paz, compositor dodecafonista argentino.</figcaption>
+                              </figure>
+                        </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-4">
-                    <figure class="figure text-center text-md-left">
-                        <img src="assets/arnold-schoenberg.jpg" class="figure-img img-fluid rounded" alt="Foto de Arnold Schoenberg">
-                        <figcaption class="figure-caption">Arnold Schönberg, creador de la técnica dodecafónica. (Foto: Florence Homolka)</figcaption>
-                      </figure>
-                </div>
-            </div> 
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
         </div>
     </div>
     <footer class="mb-3 d-flex justify-content-center">
         <p>
-            0.2 // 02.11.2020
+            0.3 // 03.11.2020 // Hecho con <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
         </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
