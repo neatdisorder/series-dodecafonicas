@@ -54,3 +54,7 @@ body {
 img {
     max-height: 400px;
 }
+
+a:hover {
+    text-decoration: none;
+}

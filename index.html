@@ -9,12 +9,48 @@
     <script src="script.js"></script>
 </head>
 <body class="container-fluid d-flex flex-column justify-content-between">
+    <audio id="reproducirC">
+        <source src="piano-samples/c4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirCsos">
+        <source src="piano-samples/c-4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirD">
+        <source src="piano-samples/d4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirDsos">
+        <source src="piano-samples/d-4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirE">
+        <source src="piano-samples/e4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirF">
+        <source src="piano-samples/f4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirFsos">
+        <source src="piano-samples/f-4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirG">
+        <source src="piano-samples/g4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirGsos">
+        <source src="piano-samples/g-4.mp3" type="audio/mpeg">
+    </audio>    
+    <audio id="reproducirA">
+        <source src="piano-samples/a4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reproducirAsos">
+        <source src="piano-samples/a-4.mp3" type="audio/mpeg">
+    </audio> 
+    <audio id="reproducirB">
+        <source src="piano-samples/b4.mp3" type="audio/mpeg">
+    </audio> 
     <div>
         <header class="mt-5">
             <h1 class="text-center">Generador de series dodecafónicas</h1>
         </header>
         <nav class="d-flex justify-content-center my-4">
-            <ul class="nav nav-pills flex-column flex-md-row text-center" id="pills-tab" role="tablist">
+            <ul class="nav nav-pills flex-column flex-lg-row text-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active m-2" id="pills-generador-tab" data-toggle="pill" href="#pills-generador" role="tab" aria-controls="pills-generador" aria-selected="true">
                         Generador
@@ -30,28 +66,48 @@
     </div>
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active background-white" id="pills-generador" role="tabpanel" aria-labelledby="pills-generador-tab">
-            <main class="d-flex flex-column align-items-center text-center mx-3">
-                <h3>
-                    SERIE:
-                </h3>
+            <main class="d-flex flex-column align-items-center mx-3">
+                <div class="d-flex justify-content-between align-items-center w-50">
+                    <h3>
+                        SERIE
+                    </h3>
+                    <p>
+                        <a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>
+                    </p>
+                </div>
                 <p id="serieResultadoJS" class="invisible">
                     DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI
                 </p>
-                <h3>
-                    RETROGRADADA:
-                </h3>
+                <div class="d-flex justify-content-between align-items-center w-50">
+                    <h3>
+                        RETROGRADADA
+                    </h3>
+                    <p>
+                        <a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>
+                    </p>
+                </div>
                 <p id="serieRetrogradadaJS" class="invisible">
                     DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI
                 </p>
-                <h3>
-                    INVERTIDA:
-                </h3>
+                <div class="d-flex justify-content-between align-items-center w-50">
+                    <h3>
+                        INVERTIDA
+                    </h3>
+                    <p>
+                        <a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>
+                    </p>
+                </div>
                 <p id="serieInvertidaJS" class="invisible">
                     DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI
                 </p>
-                <h3>
-                    RETROGRADADA INVERTIDA:
-                </h3>
+                <div class="d-flex justify-content-between align-items-center w-50">
+                    <h3>
+                        RETROGRADADA INVERTIDA
+                    </h3>
+                    <p>
+                        <a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>
+                    </p>
+                </div>
                 <p id="serieInvertidaRetrogradadaJS" class="invisible">
                     DO - DO# - RE - RE# - MI - FA - FA# - SOL - SOL# - LA - LA# - SI
                 </p>
@@ -114,18 +170,18 @@
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only">Anterior</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only">Siguiente</span>
                 </a>
               </div>
         </div>
     </div>
     <footer class="mb-3 d-flex justify-content-center">
         <p>
-            0.3 // 03.11.2020 // Hecho con <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+            0.4 // 03.11.2020 // Hecho con <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
         </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -143,3 +143,166 @@ function generarSeries() {
     document.getElementById("serieInvertidaRetrogradadaJS").innerHTML = mostrarInvertidaRetrogradada;
     // document.getElementById("boton").innerHTML = "¡Actualizá la página para empezar de nuevo!";
 }
+
+// Reproducción de series.
+
+function reproduccionSerieResultado() {
+    let serie = document.getElementById("serieResultadoJS").innerText;
+    console.log(serie);
+    let arrSerie = serie.split(' - ');
+    console.log(arrSerie);
+    reproducirSerie(arrSerie);
+}
+
+function reproduccionSerieRetrogradada() {
+    let serie = document.getElementById("serieRetrogradadaJS").innerText;
+    console.log(serie);
+    let arrSerie = serie.split(' - ');
+    console.log(arrSerie);
+    reproducirSerie(arrSerie);
+}
+
+function reproduccionSerieInvertida() {
+    let serie = document.getElementById("serieInvertidaJS").innerText;
+    console.log(serie);
+    let arrSerie = serie.split(' - ');
+    console.log(arrSerie);
+    reproducirSerie(arrSerie);
+}
+
+function reproduccionSerieInvertidaRetrogradada() {
+    let serie = document.getElementById("serieInvertidaRetrogradadaJS").innerText;
+    console.log(serie);
+    let arrSerie = serie.split(' - ');
+    console.log(arrSerie);
+    reproducirSerie(arrSerie);
+}
+
+function reproducirSerie(arr) {
+
+    elegirNota(arr[0]).play();
+
+    setTimeout(() => {
+        elegirNota(arr[1]).play();
+    }, 750);
+
+    setTimeout(() => {
+        elegirNota(arr[2]).play();
+    }, 1500);
+
+    setTimeout(() => {
+        elegirNota(arr[3]).play();
+    }, 2250);
+
+    setTimeout(() => {
+        elegirNota(arr[4]).play();
+    }, 3000);
+
+    setTimeout(() => {
+        elegirNota(arr[5]).play();
+    }, 3750);
+
+    setTimeout(() => {
+        elegirNota(arr[6]).play();
+    }, 4500);
+
+    setTimeout(() => {
+        elegirNota(arr[7]).play();
+    }, 5250);
+
+    setTimeout(() => {
+        elegirNota(arr[8]).play();
+    }, 6000);
+
+    setTimeout(() => {
+        elegirNota(arr[9]).play();
+    }, 6750);
+
+    setTimeout(() => {
+        elegirNota(arr[10]).play();
+    }, 7500);
+
+    setTimeout(() => {
+        elegirNota(arr[11]).play();
+    }, 8250);
+
+}
+
+function elegirNota(value) {
+    let x;
+    switch(value) {
+        case "DO":
+            return document.getElementById("reproducirC");
+        case "DO#":
+            return document.getElementById("reproducirCsos");
+        case "RE":
+            return document.getElementById("reproducirD");
+        case "RE#":
+            return document.getElementById("reproducirDsos");
+        case "MI":
+            return document.getElementById("reproducirE");
+        case "FA":
+            return document.getElementById("reproducirF");
+        case "FA#":
+            return document.getElementById("reproducirFsos");
+        case "SOL":
+            return document.getElementById("reproducirG");
+        case "SOL#":
+            return document.getElementById("reproducirGsos");
+        case "LA":
+            return document.getElementById("reproducirA");
+        case "LA#":
+            return document.getElementById("reproducirAsos");
+        case "SI":
+            return document.getElementById("reproducirB");
+        }
+}
+
+
+// function reproducirNota(array, j) {
+//     setTimeout(() => {
+//         var x;
+//         switch(array[j]) {
+//             case "DO":
+//                 x = document.getElementById("reproducirC");
+//                 break;
+//             case "DO#":
+//                 x = document.getElementById("reproducirCsos");
+//                 break;
+//             case "RE":
+//                 x = document.getElementById("reproducirD");
+//                 break;
+//             case "RE#":
+//                 x = document.getElementById("reproducirDsos");
+//                 break;
+//             case "MI":
+//                 x = document.getElementById("reproducirE");
+//                 break;
+//             case "FA":
+//                 x = document.getElementById("reproducirF");
+//                 break;
+//             case "FA#":
+//                 x = document.getElementById("reproducirFsos");
+//                 break;
+//             case "SOL":
+//                 x = document.getElementById("reproducirG");
+//                 break;
+//             case "SOL#":
+//                 x = document.getElementById("reproducirGsos");
+//                 break;
+//             case "LA":
+//                 x = document.getElementById("reproducirA");
+//                 break;
+//             case "LA#":
+//                 x = document.getElementById("reproducirAsos");
+//                 break;
+//             case "SI":
+//                 x = document.getElementById("reproducirB");
+//                 break;
+//             }
+//         x.play(); 
+//         console.log(x);
+//         console.log(array[i]);
+//         console.log(i);
+//     }, 2000);
+// }
