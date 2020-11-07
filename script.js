@@ -152,11 +152,11 @@ function reproduccionSerieResultado() {
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
     clearAllTimeouts();
-    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
     reproducirSerie(arrSerie);
-    document.getElementById("escucharSerie").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
+    document.getElementById("escucharSerie").innerHTML = '<a href="#a" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function reproduccionSerieRetrogradada() {
@@ -164,12 +164,12 @@ function reproduccionSerieRetrogradada() {
     console.log(serie);
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
-    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharSerie").innerHTML = '<a href="#a" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
     clearAllTimeouts();
     reproducirSerie(arrSerie);
-    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#a" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function reproduccionSerieInvertida() {
@@ -178,11 +178,11 @@ function reproduccionSerieInvertida() {
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
     clearAllTimeouts();
-    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharSerie").innerHTML = '<a href="#a" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
     reproducirSerie(arrSerie);
-    document.getElementById("escucharInvertida").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#a" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function reproduccionSerieInvertidaRetrogradada() {
@@ -191,19 +191,19 @@ function reproduccionSerieInvertidaRetrogradada() {
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
     clearAllTimeouts();
-    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharSerie").innerHTML = '<a href="#a" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
     reproducirSerie(arrSerie);
-    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#a" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function silenciar() {
     clearAllTimeouts();
-    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
-    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharSerie").innerHTML = '<a href="#a" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#a" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
 }
 
 let timeouts = [];
