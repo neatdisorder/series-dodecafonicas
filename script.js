@@ -151,7 +151,12 @@ function reproduccionSerieResultado() {
     console.log(serie);
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
+    clearAllTimeouts();
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
     reproducirSerie(arrSerie);
+    document.getElementById("escucharSerie").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function reproduccionSerieRetrogradada() {
@@ -159,7 +164,12 @@ function reproduccionSerieRetrogradada() {
     console.log(serie);
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
+    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
+    clearAllTimeouts();
     reproducirSerie(arrSerie);
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function reproduccionSerieInvertida() {
@@ -167,7 +177,12 @@ function reproduccionSerieInvertida() {
     console.log(serie);
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
+    clearAllTimeouts();
+    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
     reproducirSerie(arrSerie);
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
 
 function reproduccionSerieInvertidaRetrogradada() {
@@ -175,58 +190,79 @@ function reproduccionSerieInvertidaRetrogradada() {
     console.log(serie);
     let arrSerie = serie.split(' - ');
     console.log(arrSerie);
+    clearAllTimeouts();
+    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
     reproducirSerie(arrSerie);
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" class="text-danger" onclick="silenciar()">🔇 SILENCIAR</a>';
 }
+
+function silenciar() {
+    clearAllTimeouts();
+    document.getElementById("escucharSerie").innerHTML = '<a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertida").innerHTML = '<a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>';
+    document.getElementById("escucharInvertidaRetrogradada").innerHTML = '<a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>';
+}
+
+let timeouts = [];
 
 function reproducirSerie(arr) {
 
-    elegirNota(arr[0]).play();
+    timeouts.push(elegirNota(arr[0]).play());
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[1]).play();
-    }, 750);
+    }, 750));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[2]).play();
-    }, 1500);
+    }, 1500));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[3]).play();
-    }, 2250);
+    }, 2250));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[4]).play();
-    }, 3000);
+    }, 3000));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[5]).play();
-    }, 3750);
+    }, 3750));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[6]).play();
-    }, 4500);
+    }, 4500));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[7]).play();
-    }, 5250);
+    }, 5250));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[8]).play();
-    }, 6000);
+    }, 6000));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[9]).play();
-    }, 6750);
+    }, 6750));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[10]).play();
-    }, 7500);
+    }, 7500));
 
-    setTimeout(() => {
+    timeouts.push(setTimeout(() => {
         elegirNota(arr[11]).play();
-    }, 8250);
-
+    }, 8250));
 }
+
+function clearAllTimeouts() {
+    for (let i = 0, z = timeouts.length; i < z; i++) {
+        clearTimeout(timeouts[i]);
+    }
+    timeouts = [];
+ }
 
 function elegirNota(value) {
     let x;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body class="container-fluid d-flex flex-column justify-content-between">
+<body class="container-fluid d-flex flex-column justify-content-between" onload="generarSeries()">
     <audio id="reproducirC">
         <source src="piano-samples/c4.mp3" type="audio/mpeg">
     </audio>
@@ -71,7 +71,7 @@
                     <h3>
                         SERIE
                     </h3>
-                    <p>
+                    <p id="escucharSerie">
                         <a href="#" onclick="reproduccionSerieResultado()">🎹 ESCUCHAR</a>
                     </p>
                 </div>
@@ -82,7 +82,7 @@
                     <h3>
                         RETROGRADADA
                     </h3>
-                    <p>
+                    <p id="escucharRetrogradada">
                         <a href="#" onclick="reproduccionSerieRetrogradada()">🎹 ESCUCHAR</a>
                     </p>
                 </div>
@@ -93,7 +93,7 @@
                     <h3>
                         INVERTIDA
                     </h3>
-                    <p>
+                    <p id="escucharInvertida">
                         <a href="#" onclick="reproduccionSerieInvertida()">🎹 ESCUCHAR</a>
                     </p>
                 </div>
@@ -104,7 +104,7 @@
                     <h3>
                         RETROGRADADA INVERTIDA
                     </h3>
-                    <p>
+                    <p id="escucharInvertidaRetrogradada">
                         <a href="#" onclick="reproduccionSerieInvertidaRetrogradada()">🎹 ESCUCHAR</a>
                     </p>
                 </div>
@@ -124,7 +124,7 @@
                         <div class="col-lg-4 mb-3">
                             <h3 class="text-center text-lg-left">El dodecafonismo</h3>
                             <p class="text-justify">
-                                El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                                El <strong>dodecafonismo</strong> es una técnica de composición basada en la utilización sistemática de los doce sonidos de la escala cromática temperada occidental. Al contrario de lo que sucede en una composición “tonal”, en una composición que utiliza la técnica dodecafónica la elección de las notas se realiza siguiendo de manera estricta y sin repeticiones la sucesión de una serie matriz que incluye las doce alturas y sus tres series derivadas (invertida, retrogradada y retrogradada invertida). El sistema dodecafónico fue concebido por el compositor austriaco <strong>Arnold Schönberg</strong> hacia el año 1923. Su objetivo principal era lograr la “emancipación de la disonancia” en la música, es decir, elaborar un sistema que posibilite nuevas formas de organización de los sonidos a partir de la exploración de nuevas combinaciones.
                             </p>
                         </div>
                         <div class="col-lg-4 text-center">
@@ -140,7 +140,7 @@
                         <div class="col-lg-4 mb-3">
                             <h3 class="text-center text-lg-left">Segunda Escuela de Viena</h3>
                             <p class="text-justify">
-                                Slide 2. El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                                Se conoce como <strong>Segunda Escuela de Viena</strong> al grupo de compositores que, nucleados alrededor de Arnold Schönberg, empezaron a aplicar la técnica dodecafónica y desarrollaron y extendieron su uso hasta mediados del siglo XX. Entre ellos se destacan los compositores <strong>Anton Webern</strong> y <strong>Alban Berg</strong>, quienes produjeron una gran cantidad de obras aplicando los procedimientos dodecafónicos. Si bien la técnica fue ampliamente criticada durante los primeros años de su aplicación por sus aparentes limitaciones armónicas, la creación del sistema fue determinante para el desarrollo de la música académica occidental en el siglo XX. La idea de utilizar series o matrices numéricas para determinar parámetros musicales fue recuperada durante la posguerra por los compositores <strong>Olivier Messiaen</strong> y <strong>Pierre Boulez</strong>, quienes utilizaron este sistema para crear obras dentro del lenguaje conocido como <strong>serialismo integral</strong>.
                             </p>
                         </div>
                         <div class="col-lg-4 text-center">
@@ -156,7 +156,7 @@
                         <div class="col-lg-4 mb-3">
                             <h3 class="text-center text-lg-left">Dodecafonismo latinoamericano</h3>
                             <p class="text-justify">
-                                Slide 3. El dodecafonismo o música dodecafónica; La gran mayoría de la música occidental está compuesta sobre una estructura llamada sistema tonal que regula las relaciones entre las notas de una escala y los acordes que de ella emergen. El sistema se organiza en torno a una nota que será llamada tónica y dará nombre a la tonalidad, la cual podrá ser mayor o menor (Do Mayor o Mi menor por ejemplo). El dodecafonismo propone en sus reglas la igualdad de todas las notas comprendidas en una octava, eliminando la tónica como nota más importante en torno a la cual se ordenan el resto de los sonidos. Históricamente, procede de manera directa del «atonalismo libre», y surge de la necesidad que había a principios del siglo XX de organizar coherentemente las nuevas posibilidades de la música y enfocarla a las sensibilidades emergentes. Como regla fundamental no se repite ningún sonido hasta que hayan sonado todos los otros tonos.
+                                La llegada a América Latina de la técnica dodecafónica coincidió con un período en el que la producción musical de la región estaba especialmente enfocada en la combinación de los elementos tímbricos y armónicos del post-romanticismo europeo con interpretaciones de las formas folklóricas. Fueron el compositor argentino <strong>Juan Carlos Paz</strong> y el compositor alemán <strong>Hans-Joachim Koellreutter</strong>, exiliado en Brasil, los primeros en aplicarla y divulgarla en el continente. En palabras de la compositora e investigadora uruguaya <strong>Graciela Paraskevaídis</strong>: <em>“La introducción del dodecafonismo en Argentina y Brasil significó un rompimiento con el falso nacionalismo y un antídoto contra la música reaccionaria (neoclásica). En el momento en que fue introducido en Sudamérica, representaba una salida del estancamiento del lenguaje musical, en aquellos países en que la música nueva estaba amenazada de asfixia por este nacionalismo estereotipado”.</em>
                             </p>
                         </div>
                         <div class="col-lg-4 text-center">
